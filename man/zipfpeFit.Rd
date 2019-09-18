@@ -13,7 +13,8 @@
 \alias{BIC.zipfpeR}
 \title{Zipf-PE parameters estimation.}
 \usage{
-zipfpeFit(data, init_alpha = NULL, init_beta = NULL, level = 0.95, ...)
+zipfpeFit(data, init_alpha = NULL, init_beta = NULL, level = 0.95,
+  ...)
 
 \method{residuals}{zipfpeR}(object, ...)
 
@@ -77,7 +78,8 @@ The function \emph{\link{optim}} is used to estimate the parameters.
 \examples{
 data <- rzipfpe(100, 2.5, 1.3)
 data <- as.data.frame(table(data))
-data[,1] <- as.numeric(levels(data[,1])[data[,1]])
+data[,1] <- as.numeric(as.character(data[,1]))
+data[,2] <- as.numeric(as.character(data[,2]))
 initValues <- getInitialValues(data, model='zipfpe')
 obj <- zipfpeFit(data, init_alpha = initValues$init_alpha, init_beta = initValues$init_beta)
 }

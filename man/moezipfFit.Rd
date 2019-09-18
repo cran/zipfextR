@@ -13,7 +13,8 @@
 \alias{BIC.moezipfR}
 \title{MOEZipf parameters estimation.}
 \usage{
-moezipfFit(data, init_alpha = NULL, init_beta = NULL, level = 0.95, ...)
+moezipfFit(data, init_alpha = NULL, init_beta = NULL, level = 0.95,
+  ...)
 
 \method{residuals}{moezipfR}(object, ...)
 
@@ -76,7 +77,8 @@ The function \emph{\link{optim}} is used to estimate the parameters.
 \examples{
 data <- rmoezipf(100, 2.5, 1.3)
 data <- as.data.frame(table(data))
-data[,1] <- as.numeric(levels(data[,1])[data[,1]])
+data[,1] <- as.numeric(as.character(data[,1]))
+data[,2] <- as.numeric(as.character(data[,2]))
 initValues <- getInitialValues(data, model='moezipf')
 obj <- moezipfFit(data, init_alpha = initValues$init_alpha, init_beta = initValues$init_beta)
 }
