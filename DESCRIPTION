@@ -1,7 +1,7 @@
 Package: zipfextR
 Type: Package
 Title: Zipf Extended Distributions
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(person("Ariel", "Duarte-López", role = c("aut", "cre"),
                     email = "aduarte@ac.upc.edu",
 		    comment = c(ORCID = "0000-0002-7432-0344")),
@@ -27,6 +27,6 @@ BugReports: https://github.com/ardlop/zipfextR/issues
 RoxygenNote: 6.1.1
 Suggests: testthat
 NeedsCompilation: no
-Packaged: 2019-09-18 13:09:23 UTC; ariel
+Packaged: 2020-07-07 07:30:49 UTC; ariel
 Repository: CRAN
-Date/Publication: 2019-09-18 14:40:02 UTC
+Date/Publication: 2020-07-07 08:30:03 UTC
